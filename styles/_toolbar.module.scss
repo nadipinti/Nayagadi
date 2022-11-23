@@ -1,0 +1,128 @@
+.toolbar {
+    position: fixed;
+    width:100%;
+    background-color: grey;
+    height:56px;
+    top:0;
+    left:0;
+}
+.toolbar__navigation {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.toolbar__logo {
+    margin-left: 1rem;
+}
+.toolbar__logo a{
+    color:orangered;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.spacer {
+    flex: 1;
+}
+.toolbar_navigation_items {
+  color:#ffffff;
+  text-decoration: none;
+}
+.toolbar_navigation_items ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display:flex;
+}
+.toolbar_navigation_items li {
+    padding: 0 0.5rem;
+    text-decoration: none;
+}
+
+@media (max-width : 768px) {
+    .toolbar_navigation_items {
+        display: none;
+    }
+}
+@media (min-width : 769px) {
+    .togglebar_togglebutton {
+        display: none;
+    }
+}
+.toggle_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:24px;
+    width:30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.toggle_button:focus {
+    outline: none;
+}
+
+.toggle_button__line {
+    width:30px;
+    height:2px;
+    background-color: orangered;
+
+}
+
+.side_drawer {
+height:100%;
+background-color: var(--white-bg);
+box-shadow: 1px 0px 7px rgba(0 0 0.5);
+position: fixed;
+top:0;
+left:0;
+width:70%;
+max-width: 400px;
+z-index: 200;
+transform: translateX(-100%);
+transition: transform 0.3s ease-out;
+}
+
+.side_drawer .open {
+transform: translateX(0);
+}
+.side_drawer ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side_drawer li {
+    margin: 0.5rem 0;
+}
+.side_drawer a {
+color:black;
+text-decoration: none;
+font-size: 1.2rem;
+}
+.side_drawer a:hover,
+.side_drawer a:active {
+    color:orangered
+}
+
+@media (min-width : 769px) {
+    .side_drawer {
+        display: none;
+    }
+}
+
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    // background-color: aquamarine;
+    background-color: transparent;
+    z-index: 100;
+    top:56px;
+    left:0;
+}
